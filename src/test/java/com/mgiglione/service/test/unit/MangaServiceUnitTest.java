@@ -45,7 +45,7 @@ public class MangaServiceUnitTest {
         List<Manga> mangasByTitle = mangaService.getMangasByTitle("goku");
         assertThat(mangasByTitle).isNotNull()
             .isNotEmpty()
-            .allMatch(p -> p.getTitle()
+            .anyMatch(p -> p.getTitle()
                 .toLowerCase()
                 .contains("ken"));
 
